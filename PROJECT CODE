@@ -1,1 +1,47 @@
+import numpy as np
 
+# Dataset
+# [Hours, Attendance, Previous Score]
+X = np.array([
+    [2, 60, 50],
+    [3, 65, 55],
+    [4, 70, 60],
+    [5, 75, 65],
+    [6, 80, 70],
+    [7, 85, 75],
+    [8, 90, 80],
+    [9, 95, 85],
+    [10, 100, 90]
+])
+
+# Final Scores
+y = np.array([55, 60, 65, 70, 75, 80, 85, 90, 95])
+
+# Initialize weights and bias
+weights = np.zeros(3)
+bias = 0
+
+# Learning rate and iterations
+lr = 0.0001
+epochs = 10000
+
+# Training using Gradient Descent
+for _ in range(epochs):
+    y_pred = np.dot(X, weights) + bias
+    
+    # Errors
+    error = y_pred - y
+    
+    # Gradients
+    dw = (1/len(X)) * np.dot(X.T, error)
+    db = (1/len(X)) * np.sum(error)
+    
+    # Update weights
+    weights -= lr * dw
+    bias -= lr * db
+
+# Prediction
+test = np.array([8, 90, 80])
+prediction = np.dot(test, weights) + bias
+
+print("Predicted Score:", prediction)
