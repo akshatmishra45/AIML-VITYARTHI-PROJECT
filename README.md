@@ -96,6 +96,39 @@ Output:
 Predicted Score ≈ 85
 ```
 
+---
+
+## ▶️ How to Run
+
+1. Install Python (>=3.x)
+2. Install NumPy:
+
+   ```
+   pip install numpy
+   ```
+3. Run the script:
+
+   ```
+   python main.py
+   ```
+
+---
+
+## 📊 Output
+
+```
+Predicted Score: <value>
+```
+
+---
+
+## 📌 Future Improvements
+
+* Add feature scaling (normalization)
+* Use real-world datasets
+* Visualize training loss
+* Compare with scikit-learn model
+* Add test/train split
 
 ---
 
@@ -103,8 +136,4 @@ Predicted Score ≈ 85
 
 Pull requests are welcome! Feel free to improve the model or add features.
 
----
 
-## 📜 License
-
-This project is open-source and available under the MIT License.
